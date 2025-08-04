@@ -1,0 +1,6 @@
+---
+layout: post-layout
+title:  "Die erste Meldung"
+---
+
+Das ist eine gute Nachricht!

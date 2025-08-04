@@ -1,0 +1,31 @@
+---
+---
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>{{ page.title }} Seite {{ paginator.page }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ 'assets/css/zeitmaschine.css' | relative_url }}">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/">cieszynski.de</a>/<a href="/7781/">7781</a>
+            <a href="../">zurück</a>
+        </div>
+    </header>
+    <img src="{{ 'assets/images/zeitmaschine-plain.svg' | relative_url }}" alt="">
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+        <a href="/rechtliches.html">Impressum | Datenschutz</a>
+    </footer>
+</body>
+
+</html>

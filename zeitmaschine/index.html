@@ -1,0 +1,42 @@
+---
+layout: zeitmaschine/default
+title: Zeitmschine
+---
+<h1>Zeit(ungs)maschine</h1>
+<p>
+    Beginn deine Zeitreise in die Jahre 1977 bis 1981 anhand von Zeitungsmeldungen.
+</p>
+
+{% for post in paginator.posts %}
+<article>
+    <h2>{{ post.title }}</h2>
+    {{ post.excerpt }}
+    <a href="{{ post.url | relative_url }}">Zur Meldung</a>
+</article>
+{% endfor %}
+
+<nav class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" title="vorherige Seite">&#x27F5;</a>
+    {% endif %}
+
+    {% for num in (1..paginator.total_pages) %}
+    {% if num == paginator.page %}
+    <a class="current">{{ num }}</a>
+    {% elsif num == 1 %}
+    <a href="{{ site.paginate_path | relative_url | replace: 'seite:num/', '' }}">{{ num }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | relative_url | replace: ':num', num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" title="nächste Seite">&#x27F6;</a>
+    {% endif %}
+</nav>
+
+<aside>
+    {% for category in site.categories %}
+    <a href="{{ category[0] | relative_url }}">{{ category[0] | capitalize  }}</a>        
+    {% endfor %}
+</aside>
