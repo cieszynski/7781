@@ -8,7 +8,8 @@ title: Zeitmschine
 </p>
 
 {% for post in paginator.posts %}
-<article>
+<article class="teaser">
+    <time datetime="{{ post.date }}">{% include locale-date.html date=post.date%}</time>
     <h2>{{ post.title }}</h2>
     {{ post.excerpt }}
     <a href="{{ post.url | relative_url }}">Zur Meldung</a>
@@ -37,6 +38,6 @@ title: Zeitmschine
 
 <aside>
     {% for category in site.categories %}
-    <a href="{{ category[0] | relative_url }}">{{ category[0] | capitalize  }}</a>        
+    <a href="{{ category[0] | relative_url }}">{{ category[0] | capitalize }}</a>
     {% endfor %}
 </aside>

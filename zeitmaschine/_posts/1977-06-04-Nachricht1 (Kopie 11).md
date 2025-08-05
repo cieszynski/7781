@@ -1,5 +1,5 @@
 ---
-layout: post-layout
+layout: zeitmaschine/posts
 title:  "Die erste Meldung"
 ---
 
