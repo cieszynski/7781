@@ -1,0 +1,20 @@
+{% assign postlist="" | split:"," %}
+{% for tag in page.tags %}
+{% for post in site.tags[tag] %}
+{% if post != page %}
+{% unless postlist contains post %}
+{% assign postlist = postlist | push: post %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% if postlist.size > 0 %}
+<ul>
+    {% for post in postlist | limit: site.taglist %}
+    <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }} <time datetime="{{ page.next.date }}">{% include locale-date.html date=page.next.date%}</time></a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}

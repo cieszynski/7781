@@ -4,3 +4,5 @@ gems: [jekyll-paginate]
 plugins: [jekyll-paginate]
 paginate: 12
 paginate_path: "/zeitmaschine/seite:num/"
+
+taglist: 5

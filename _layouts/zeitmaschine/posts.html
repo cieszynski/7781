@@ -29,20 +29,22 @@
             {% endfor %}
             <!--{% for post in site.posts %}{% if page==post %}{{ forloop.index }}{% endif %}{% endfor %}-->
         </article>
-        <nav style="
-        width: 100%;
-        gap: 16px;
-        display: flex;
-        flex-flow: wrap;
-        align-items: center;
-        justify-content: center;">
+
+        <aside>
             {% if page.previous %}
-            &lt; <a href="{{ page.previous.url | relative_url }}">{{page.previous.title}}</a>
+            <a class="previous" href="{{ page.previous.url | relative_url }}">
+                Weiter am <time datetime="{{ page.previous.date }}">{% include locale-date.html
+                    date=page.previous.date%}</time>
+            </a>
             {% endif %}
             {% if page.next %}
-            <a href="{{ page.next.url | relative_url }}">{{page.next.title}}</a> &gt;
+            <a class="next" href="{{ page.next.url | relative_url }}">
+                Weiter am <time datetime="{{ page.next.date }}">{% include locale-date.html date=page.next.date%}</time>
+            </a>
             {% endif %}
-        </nav>
+
+            {% include distinct-tag-list.html %}
+        </aside>
     </main>
     <footer>
         <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
