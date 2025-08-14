@@ -1,0 +1,78 @@
+@import url("/assets/css/default.css");
+
+@layer theme {
+    section {
+        gap: 16px;
+        padding: 16px;
+        background: #555;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        aspect-ratio: 2;
+        min-width: 200px;
+        border-radius: 16px;
+        text-align: center;
+        overflow: clip;
+        flex: 1;
+
+        &:hover {
+            background-color: #444;
+        }
+
+        &>a {
+            display: block;
+            position: absolute;
+            color: transparent;
+            inset: 0;
+        }
+
+        & img {
+            border-radius: 24px;
+            width: 100%;
+        }
+    }
+
+    body {
+        font-family: fjallaoneregular;
+        color: #ddd;
+        padding: 16px;
+        gap: 0;
+    }
+
+    footer {
+        background-color: #aa0000;
+    }
+
+    h1 {
+        background-color: #555;
+        border-radius: 0 0 16px 16px;
+
+        & img {
+            border-radius: 0 0 16px 16px;
+        }
+    }
+
+    header {
+        display: flex;
+        border-radius: 16px;
+        background-color: #aa0000;
+        border-radius: 16px 16px 0 0;
+        padding: 16px;
+    }
+
+    html {
+        background: #666;
+    }
+
+    main {
+        padding: 16px 0;
+        gap: 16px;
+    }
+
+    nav {
+        padding: 16px;
+        border-radius: 16px 16px 0 0;
+        background-color: #aa6600;
+    }
+}

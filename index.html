@@ -1,126 +1,33 @@
 ---
-title: test
+title: "'77 bis '81"
+layout: default
+stylesheet: "7781.css"
 ---
-<!DOCTYPE html>
-<html lang="de">
-
-<head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        body {
-            height: 100%;
-            display: flex;
-            flex-flow: column;
-            overflow: hidden;
-
-            &>header {
-                color: white;
-                background-color: black;
-                height: 60px;
-                padding: 16px;
-            }
-        }
-
-        h1 {
-            text-align: center;
-            width: 100%;
-            position: absolute;
-            color: #fff;
-            z-index: 1;
-            word-spacing: -.05em;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        main {
-            display: flex;
-            flex-flow: column;
-            overflow: clip auto;
-            position: relative;
-            flex: 1;
-
-            &>article:first-of-type {
-                position: relative;
-                min-height: 50vh;
-
-                & header {
-                    display: flex;
-                    flex-flow: column;
-                    align-items: center;
-                    justify-content: center;
-                    row-gap: 16px;
-                    position: relative;
-                    backdrop-filter: grayscale(1);
-                    background-image: linear-gradient(#000000ff, #00000044 30%);
-                    padding: 40px 16px 16px 16px;
-                    height: 100%;
-
-                    & h2 {
-                        width: 100%;
-                        max-width: 1400px;
-                        color: #fff;
-                        font-size: 60px;
-                        text-align: center;
-                        line-height: .9;
-                    }
-
-                    &>a {
-                        color: black;
-                        background-color: #ddd;
-                        padding: 4px 24px;
-                    }
-                }
-            }
-
-            &>footer {
-                margin-top: auto;
-            }
-        }
-
-        article {
-            background-position: center;
-            background-size: cover;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <a href="/">cieszynski.de</a>
-    </header>
-    <main>
-        <h1>
-            <a href="/">77 81</a>
-        </h1>
-        <article style="background-image: url(/assets/images/schule-kreide.avif);">
-            <header>
-                <a href="/">Schulzeit</a>
-                <h2>
-                    <a href="/">Meine erste Überschrift überhaupt un so</a>
-                </h2>
-            </header>
-        </article>
-        <footer>
-            footer
-        </footer>
-    </main>
-</body>
-
-</html>
+<header>
+    <a href="/">cieszynski.de</a>
+    <a href="/" style="margin-left: auto;">zurück</a>
+</header>
+<h1>
+    <img style="width: 100%" src="/assets/images//7781-strahlen-plain.svg" alt="Die Jahre 1977 bis 1981">
+</h1>
+<main>
+    <section>
+        <img src="/assets/images/7781-steinhammer-schule-3d.svg" alt="">
+        <hgroup>
+            <h2>Grundschulzeit</h2>
+            <p>Diese Jahre haben unsere Kindheit geprägt und sind voller Erinnerungen.</p>
+        </hgroup>
+        <a href="grundschulzeit.html">Weiter zur Grundschulzeit</a>
+    </section>
+    <section>
+        <img src="/assets/images/zeitmaschine-plain.svg" alt="">
+        <hgroup>
+            <h2>Zeitmaschine</h2>
+            <p>Starte deine Zeitreise in die Jahre 1977 bis 1981 mit Zeitungsmeldungen.</p>
+        </hgroup>
+        <a href="zeitmaschine.html">Weiter zur Zeitmaschine</a>
+    </section>
+</main>
+<footer>
+    <a href="/rechtliches.html">Impressum | Datenschutz</a>
+</footer>
