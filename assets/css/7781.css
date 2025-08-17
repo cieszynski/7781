@@ -35,9 +35,15 @@
 
     body {
         font-family: fjallaoneregular;
-        color: #ddd;
+        color: #fff;
         padding: 16px;
         gap: 0;
+
+        &>p {
+            font-family: literal;
+            text-align: center;
+            padding: 8px 16px;
+        }
     }
 
     footer {
