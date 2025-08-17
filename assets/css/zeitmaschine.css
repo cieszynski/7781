@@ -1,6 +1,111 @@
---- 
---- 
+@import url("/assets/css/default.css");
 
+@layer theme {
+
+    body {
+        background-color: #504a46;
+        font-family: fjallaoneregular;
+    }
+
+    footer {
+        color: #fff;
+    }
+
+    h1 {
+        font-family: fjallaoneregular;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        color: #2c2824;
+        background-color: #e6a347;
+        padding: 16px;
+    }
+
+    main {
+        background-color: #c7c2b6;
+        border-radius: 32px;
+        padding: 32px;
+        gap: 16px;
+    }
+
+    nav {
+        gap: 16px;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        width: 100%;
+
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            color: #ffffff;
+            background-color: #000000;
+
+            &.current {
+                color: #000000;
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        width: 100%;
+    }
+
+    section {
+        gap: 16px;
+        padding: 16px;
+        background: #eee;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        aspect-ratio: 2;
+        min-width: min(100%, 320px);
+        background-color: #fcfbf2;
+        box-shadow: 5px 5px 5px #666;
+        border-radius: 8px;
+        padding: 32px;
+        text-align: center;
+        overflow: clip;
+        flex: 1;
+
+        &:nth-of-type(2n) {
+            rotate: -.5deg;
+        }
+
+        &:nth-of-type(3n) {
+            rotate: .5deg;
+        }
+
+        &:nth-of-type(4n) {
+            rotate: -1deg;
+        }
+
+        &:nth-of-type(5n) {
+            rotate: 1deg;
+        }
+
+        &>a {
+            display: block;
+            position: absolute;
+            color: transparent;
+            inset: 0;
+        }
+    }
+}
+
+/* 
 @font-face {
     font-family: 'fjallaoneregular';
     src: url({{ 'assets/fonts/fjallaone-regular-webfont.woff2' | relative_url }}) format('woff2'),
@@ -81,7 +186,7 @@ main {
         flex: 1;
         position: relative;
         min-width: min(100%, 320px);
-        /* max-width: calc(calc(100% + 16px) / 3); */
+        /* max-width: calc(calc(100% + 16px) / 3); * /
         background-color: #fcfbf2;
         box-shadow: 5px 5px 5px #666;
         border-radius: 8px;
@@ -213,4 +318,4 @@ p {
 
 ul {
     list-style: none;
-}
+} */
