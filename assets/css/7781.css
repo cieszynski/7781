@@ -61,7 +61,6 @@
 
     header {
         display: flex;
-        border-radius: 16px;
         background-color: #aa0000;
         border-radius: 16px 16px 0 0;
         padding: 16px;

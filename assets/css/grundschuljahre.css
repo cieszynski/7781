@@ -1,0 +1,51 @@
+@import url("/assets/css/default.css");
+
+@layer theme {
+
+    article {
+
+        flex: 1;
+    }
+
+    body {
+        gap: 0;
+        background-color: #b5fce1;
+
+        &>img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        color: #006699;
+        text-align: center;
+        font-family: "dela";
+    }
+
+    p {
+        color: #006699;
+        font-family: "dela";
+    }
+
+    main {
+        color: #000;
+        background-color: #fff;
+        padding: 32px;
+    }
+
+    footer {
+        font-family: fjallaoneregular;
+        border-radius: 0 0 16px 16px;
+        background-color: #337760;
+        color: #b5fce1;
+    }
+
+    header {
+        display: flex;
+        font-family: fjallaoneregular;
+        border-radius: 16px 16px 0 0;
+        background-color: #337760;
+        color: #b5fce1;
+        padding: 16px;
+    }
+}
