@@ -1,6 +1,7 @@
 ---
-layout: zeitmaschine/posts
-title:  "Die erste Meldung"
+layout: "post"
+title:  "Die vierte Meldung"
+stylesheet: "post.css"
 ---
 
 ## Die erste Meldung

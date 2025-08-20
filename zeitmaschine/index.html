@@ -5,18 +5,22 @@ title: Zeitmaschine
 ---
 <header>
     <a href="/">cieszynski.de</a>
-    <a href="../" style="margin-left: auto;">zurück</a>
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">zurück</a>
+    {% else %}
+    <a href="../">zurück</a>
+    {% endif %}
 </header>
-<img style="width: 100%" src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="">
+<img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="">
 <main>
-    <h1>Zeitmaschine</h1>
+    <h1>Zeit(ungs)<wbr>maschine #{{ paginator.page }}</h1>
     <p>
         Beginn deine Zeitreise in die Jahre 1977 bis 1981 anhand von Zeitungsmeldungen.
     </p>
 
     {% for post in paginator.posts %}
     <section>
-        <time datetime="{{ post.date }}">{% include locale-date.html date=post.date%}</time>
+        <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>
         <h2>{{ post.title }}</h2>
         {{ post.excerpt }}
         <a href="{{ post.url | relative_url }}">Zur Meldung</a>
@@ -25,9 +29,11 @@ title: Zeitmaschine
 
 </main>
 <nav class="pagination">
+    {% comment %}
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" title="vorherige Seite">&#x27F5;</a>
+    <a class="prev" href="{{ paginator.previous_page_path | relative_url }}" title="vorherige Seite">&#x27F5;</a>
     {% endif %}
+    {% endcomment %}
 
     {% for num in (1..paginator.total_pages) %}
     {% if num == paginator.page %}
@@ -39,16 +45,12 @@ title: Zeitmaschine
     {% endif %}
     {% endfor %}
 
+    {% comment %}
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" title="nächste Seite">&#x27F6;</a>
+    <a class="next" href="{{ paginator.next_page_path | relative_url }}" title="nächste Seite">&#x27F6;</a>
     {% endif %}
+    {% endcomment %}
 </nav>
-
-<!--     <aside>
-        {% for category in site.categories %}
-        <a href="{{ category[0] | relative_url }}">{{ category[0] | capitalize }}</a>
-        {% endfor %}
-    </aside> -->
 <footer>
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
     <a href="/rechtliches.html">Impressum | Datenschutz</a>

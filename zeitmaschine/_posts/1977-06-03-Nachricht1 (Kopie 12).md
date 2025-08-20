@@ -1,6 +1,7 @@
 ---
-layout: zeitmaschine/posts
+layout: "post"
 title:  "Die dritte Meldung"
+stylesheet: "post.css"
 tags:
     - verkehr
     - dortmund

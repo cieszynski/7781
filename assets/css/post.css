@@ -1,0 +1,61 @@
+@import url("/assets/css/default.css");
+
+@layer theme {
+
+    article {
+        border-radius: 8px;
+        padding: 16px;
+        background-color: #fcfbf2;
+        box-shadow: 5px 5px 5px #666;
+        rotate: .5deg;
+    }
+
+    body {
+        background-color: #504a46;
+        font-family: fjallaoneregular;
+        flex: 1;
+    }
+
+    figure {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        & figcaption {
+            padding: 8px;
+            font-size: small;
+            font-style: italic;
+            color: #555;
+        }
+
+        & img {
+            display: block;
+            width: min(350px, 100%);
+        }
+    }
+
+    footer {
+        color: white;
+    }
+
+
+    header {
+        color: white;
+    }
+
+    main {
+        background-color: #c7c2b6;
+        border-radius: 16px;
+        padding: 16px;
+        gap: 16px;
+        flex: 1;
+    }
+
+    cite,
+    time {
+        font-size: small;
+        font-style: italic;
+        color: #555;
+    }
+}

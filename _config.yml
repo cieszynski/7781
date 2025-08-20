@@ -2,7 +2,7 @@ TZ: Europe/Berlin
 baseurl: /7781/
 gems: [jekyll-paginate]
 plugins: [jekyll-paginate]
-paginate: 12
+paginate: 6
 paginate_path: "/zeitmaschine/seite:num/"
 
 taglist: 5

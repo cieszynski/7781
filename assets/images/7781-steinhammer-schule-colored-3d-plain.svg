@@ -175,7 +175,7 @@
          id="feDisplacementMap197" /></filter><filter
        width="1.0223975"
        height="1.1205388"
-       y="-0.059937271"
+       y="-0.059937273"
        x="-0.02239745"
        style="color-interpolation-filters:sRGB"
        id="filter198"><feTurbulence
@@ -268,7 +268,7 @@
        id="layer5"
        style="display:inline;opacity:1"><g
          id="g198"
-         transform="rotate(-5.6850416,1783.8509,156.06379)"><circle
+         transform="rotate(-5.6850416,1645.1873,4907.2893)"><circle
            style="fill:none;fill-opacity:1;stroke:#eeeeee;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter196)"
            id="path180"
            cx="1790.6544"
@@ -299,7 +299,7 @@
            d="m 1790.6544,145.59703 1.4181,146.54246"
            id="path196" /></g><path
          style="fill:none;fill-opacity:1;stroke:#eeeeee;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter198)"
-         d="m 1226.7809,179.96198 c -58.4958,-12.92479 -15.8217,-104.066854 42.7855,-67.18663 -13.2857,-50.177862 99.8449,-119.2103308 101.6156,5.68245 30.7791,-44.489874 77.6306,-40.667974 90.9192,21.39276 43.6244,-13.36279 77.3217,24.64307 43.4204,39.32819 z M 1557.182,133.4578"
+         d="m 1537.1799,212.89161 c -58.4958,-12.92479 -15.8217,-104.06685 42.7855,-67.18663 -13.2857,-50.177855 99.8449,-119.210325 101.6156,5.68245 30.7791,-44.48986 77.6306,-40.66797 90.9192,21.39277 43.6244,-13.3628 77.3217,24.64307 43.4204,39.32819 z m 330.4011,-46.50418"
          id="path197" /><path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#eeeeee;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter198-6)"
          d="m 571.10631,139.92218 c -58.4958,-12.92479 -15.8217,-104.066867 42.7855,-67.186636 -13.2857,-50.177869 99.8449,-119.210338 101.6156,5.68245 30.7791,-44.48988 77.6306,-40.667983 90.9192,21.39276 43.6244,-13.362791 77.3217,24.643076 43.4204,39.328196 z m 330.4011,-46.504186"
