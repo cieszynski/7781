@@ -20,7 +20,6 @@
         {% for post in site.posts %}
         {% if post.id == page.id %}
         {% assign pagination = forloop.index | minus: 1 | divided_by: site.paginate | plus: 1 %}
-        {{ forloop.index }}
         {% if pagination > 1 %}
         <a href="{{ site.paginate_path | replace: ':num', pagination | relative_url }}">zurück</a>
         {% else %}
