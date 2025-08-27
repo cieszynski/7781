@@ -104,9 +104,11 @@
         }
 
         &>a {
-            display: block;
+            display: flex;
             position: absolute;
-            color: transparent;
+            align-items: end;
+            justify-content: end;
+            padding: 16px;
             inset: 0;
         }
     }

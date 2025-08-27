@@ -23,7 +23,7 @@ title: Zeitmaschine
         <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>
         <h2>{{ post.title }}</h2>
         {{ post.excerpt }}
-        <a href="{{ post.url | relative_url }}">Zur Meldung</a>
+        <a href="{{ post.url | relative_url }}">Zum vollständigen Text</a>
     </section>
     {% endfor %}
 

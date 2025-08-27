@@ -16,6 +16,10 @@
         flex: 1;
     }
 
+    cite {
+        display: block;
+    }
+
     figure {
         display: flex;
         flex-flow: column;

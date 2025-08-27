@@ -2,9 +2,14 @@
 
 @layer theme {
 
+
     article {
 
         flex: 1;
+
+        & a {
+            text-decoration: underline;
+        }
     }
 
     body {
