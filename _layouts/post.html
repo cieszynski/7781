@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="{{ page.robots | default: 'follow, index' }}">
     <meta name="theme-color" content="{{ page.themeColor | default: '#666' }}">
+    <meta name="description" content="{{ page.desc }}">
+    <meta name="author" content="Stephan Cieszynski">
 
     <link rel="preload" href="{{ page.stylesheet | prepend: 'assets/css/' | relative_url  }}" as="style">
     <link rel="preload" href="/assets/fonts/fjallaone-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
