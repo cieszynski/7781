@@ -8,7 +8,7 @@ sources:
     - Ruhr-Nachrichten 07.05.1979 Nr. 105 M1
 ---
 
-Nach mehr als viereinhalb Jahren Bauzeit wurde der Revierpark Wischlingen in Dortmund feierlich eröffnet. Auch ich habe damals meinen kleinen Beitrag dazu geleistet, dass die Eröffnung ein voller Erfolg wurde.
+Nach mehr als vier Jahren Bauzeit wurde der Revierpark Wischlingen in Dortmund feierlich eröffnet. Auch ich habe damals meinen kleinen Beitrag dazu geleistet, dass die Eröffnung ein voller Erfolg wurde.
 
 Bereits Wochen zuvor wurden in der Stadt Plakate mit verschiedenen Freizeitangeboten des Revierparks aufgehängt, um das Interesse der Dortmunder am Park zu wecken. Eine weitere Marketingaktion bestand aus einem sogenannten Medienwagen, der in den westlichen Stadtteilen Station machte. Dort informierte er die Bürger mit Videos und Interviews über die bevorstehende Eröffnung. Einer dieser Standorte befand sich in der Meile in Marten.
 
