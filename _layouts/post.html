@@ -40,6 +40,18 @@
             <cite>{{ source }}</cite>
             {% endfor %}
         </article>
+        <nav>
+            {% if page.next.url %}
+            <a href="{{page.next.url | relative_url }}" class="next">
+                {% include locale-date.html date=page.next.date %}
+            </a>
+            {% endif %}
+            {% if page.previous.url %}
+            <a href="{{page.previous.url | relative_url }}" class="prev">
+                {% include locale-date.html date=page.previous.date %}
+            </a>
+            {% endif %}
+        </nav>
     </main>
     {% include global-footer.html %}
 </body>

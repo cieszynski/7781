@@ -77,14 +77,14 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        aspect-ratio: 2;
+        /* aspect-ratio: 2; */
         min-width: min(100%, 320px);
         background-color: #fcfbf2;
         box-shadow: 5px 5px 5px #666;
         border-radius: 8px;
         padding: 32px;
         text-align: center;
-        overflow: clip;
+        /* overflow: clip; */
         flex: 1;
 
         &:nth-of-type(2n) {
