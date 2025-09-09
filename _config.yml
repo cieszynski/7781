@@ -1,3 +1,4 @@
+# jekyll s -b /7781 -H 192.168.178.28 -P 8081
 TZ: Europe/Berlin
 baseurl: /7781/
 gems: [jekyll-paginate]
