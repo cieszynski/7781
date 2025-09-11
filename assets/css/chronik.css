@@ -1,0 +1,138 @@
+@import url("/assets/css/default.css");
+
+@keyframes hide {
+    from {
+        background-color: wheat;
+        opacity: 0;
+    }
+    to {
+        background-color: black;
+        opacity: 1;
+    }
+}
+@layer theme {
+
+    a.nav {
+        font-size: 0;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        transition: opacity .3s;
+        opacity: .3;
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            display: block;
+            height: 32px;
+            width: 32px;
+            content: "";
+            border: solid #eee;
+            border-width: 0 8px 8px 0;
+        }
+
+        &.up {
+            top: 0;
+            height: 32px;
+
+            &::before {
+                transform: translate(0, 12px) rotate(225deg);
+            }
+        }
+
+        &.down {
+            bottom: 0;
+            height: 32px;
+
+            &::before {
+                transform: translate(0, -12px) rotate(45deg);
+            }
+        }
+
+        &.left {
+            left: 0;
+            width: 48px;
+            flex-flow: column;
+
+            &::before {
+                transform: translate(4px) rotate(135deg);
+            }
+        }
+
+        &.right {
+            right: 0;
+            width: 48px;
+            flex-flow: column;
+
+            &::before {
+                transform: translate(-4px) rotate(315deg);
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-align: center;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-color: green;
+        position: relative;
+        padding: 48px;
+        row-gap: 16px;
+    }
+
+    body {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
+
+    details {
+        display: block;
+        border: 1px solid red;
+        width: 100%;
+    }
+
+    h1 {
+        height: 0;
+        overflow: hidden;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+
+    header {
+        padding: 32px 32px 16px 32px;
+    }
+
+    html {
+        height: 100%;
+        background: #666;
+    }
+
+    main {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(5, 100%);
+        grid-template-rows: repeat(365, 100%);
+        scroll-snap-type: both mandatory;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        overflow: auto;
+        flex: 1;
+    }
+}

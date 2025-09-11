@@ -1,0 +1,105 @@
+---
+title: "Chronik von '77 bis '81"
+layout: default
+stylesheet: "chronik.css"
+date: "2025-09-11"
+---
+<header>
+    <a href="/">cieszynski.de</a>
+    <a href="./" style="margin-left: auto;">zurück</a>
+</header>
+<h1>Chronik</h1>
+<main>
+    {% for item in (1..365) %}
+        <article id="a{{ item }}">
+            {% if item > 1 %}
+            <a href="#a{{ item | minus: 1}}" class="nav up">up</a>
+            {% endif %}
+            {% if item < 365 %}
+            <a href="#a{{ item | plus: 1}}" class="nav down">down</a>
+            {% endif %}
+            <a href="#b{{ item }}" class="nav right">right</a>
+            <details>
+                <summary>
+                    <h2>
+                        {{ "2023-002" | date: "%Y-%m-%d" }}
+                        {% include locale-date.html date=page.date %}
+                       <!--  {{ item }} 1977 -->
+                    </h2>
+                </summary>
+            </details>
+        </article>
+        <article id="b{{ item }}">
+            {% if item > 1 %}
+            <a href="#b{{ item | minus: 1}}" class="nav up">up</a>
+            {% endif %}
+            {% if item < 365 %}
+            <a href="#b{{ item | plus: 1}}" class="nav down">down</a>
+            {% endif %}
+            <a href="#a{{ item }}" class="nav left">left</a>
+            <a href="#c{{ item }}" class="nav right">right</a>
+            <details>
+                <summary>
+                    <h2>
+                        {{ item }} 1978
+                    </h2>
+                </summary>
+            </details>
+        </article>
+        <article id="c{{ item }}">
+            {% if item > 1 %}
+            <a href="#c{{ item | minus: 1}}" class="nav up">up</a>
+            {% endif %}
+            {% if item < 365 %}
+            <a href="#c{{ item | plus: 1}}" class="nav down">down</a>
+            {% endif %}
+            <a href="#b{{ item }}" class="nav left">left</a>
+            <a href="#d{{ item }}" class="nav right">right</a>
+            <details>
+                <summary>
+                    <h2>
+                        {{ item }} 1979
+                    </h2>
+                </summary>
+            </details>
+        </article>
+        <article id="d{{ item }}">
+            {% if item > 1 %}
+            <a href="#d{{ item | minus: 1}}" class="nav up">up</a>
+            {% endif %}
+            {% if item < 365 %}
+            <a href="#d{{ item | plus: 1}}" class="nav down">down</a>
+            {% endif %}
+            <a href="#c{{ item }}" class="nav left">left</a>
+            <a href="#e{{ item }}" class="nav right">right</a>
+            <details>
+                <summary>
+                    <h2>
+                        {{ item }} 1980
+                    </h2>
+                </summary>
+            </details>
+        </article>
+        <article id="e{{ item }}">
+            {% if item > 1 %}
+            <a href="#e{{ item | minus: 1}}" class="nav up">up</a>
+            {% endif %}
+            {% if item < 365 %}
+            <a href="#e{{ item | plus: 1}}" class="nav down">down</a>
+            {% endif %}
+            <a href="#d{{ item }}" class="nav left">left</a>
+            <details>
+                <summary>
+                    <h2>
+                        {{ item }} 1981
+                    </h2>
+                </summary>
+            </details>
+        </article>
+    {% endfor %}
+</main>
+
+<footer>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+    <a href="/rechtliches.html">Impressum | Datenschutz</a>
+</footer>
