@@ -1,8 +1,101 @@
 @import url("/assets/css/default.css");
 
 @layer theme {
+    section {
+        gap: 16px;
+        padding: 16px;
+        /* background: #337760ff; */
+        background-color: #337760ff;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        aspect-ratio: 2;
+        min-width: 200px;
+        /* border-radius: 8px; */
+        text-align: center;
+        overflow: clip;
+        flex: 1;
 
+        &:hover {
+            background-color: #444;
+        }
 
+        &>a {
+            display: block;
+            position: absolute;
+            color: transparent;
+            inset: 0;
+        }
+
+        & img {
+            border-radius: 8px;
+            width: 100%;
+        }
+    }
+
+    body {
+        font-family: fjallaoneregular;
+        color: #fff;
+        padding: 16px;
+        gap: 0;
+
+        &>p {
+            font-family: literal;
+            text-align: center;
+            padding: 8px 16px;
+        }
+    }
+
+    footer {
+        background-color: #337760ff;
+    }
+
+    h1 {
+        background-color: #555;
+        border-radius: 0 0 16px 16px;
+
+        & img {
+            border-radius: 0 0 16px 16px;
+        }
+    }
+
+    header {
+        display: flex;
+        background-color: #337760ff;
+        border-radius: 16px 16px 0 0;
+        padding: 16px;
+    }
+
+    html {
+        background: #666;
+    }
+
+    main {
+        padding: 0;
+        gap: 0;
+
+        &>p {
+            width: 100%;
+            color: #006699;
+            font-family: "dela";
+            background-color: #eee;
+            padding: 16px 32px;
+
+            & a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    nav {
+        padding: 16px;
+        border-radius: 16px 16px 0 0;
+        background-color: #aa6600;
+    }
+}
+
+/* 
     article {
 
         flex: 1;
@@ -52,5 +145,5 @@
         background-color: #337760;
         color: #b5fce1;
         padding: 16px;
-    }
+    } */
 }

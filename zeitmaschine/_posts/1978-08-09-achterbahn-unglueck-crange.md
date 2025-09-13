@@ -8,7 +8,7 @@ sources:
     - Ruhr-Nachrichten 07.02.1980 Nr. 32 M3
 ---
 
-Als Kind liebte ich die Kirmes. Damals kannte ich jedoch nur die MaVoFe und die Osterkirmes am Fredenbaum. Meine erste große Achterbahnfahrt erlebte ich erst viele Jahre später, dann auf der Cranger Kirmes.
+Als Kind liebte ich die Kirmes. Damals kannte ich jedoch nur die MaVoFe, die Pflaumenkirmes in Lütgendortmund und die Osterkirmes am Fredenbaum. Meine erste große Achterbahnfahrt erlebte ich erst viele Jahre später, dann auf der Cranger Kirmes.
 
 Jeden Sommer, wenn der Juli zu Ende ging, wartete ich gespannt darauf, dass die Schausteller nach Marten kamen und ihre Attraktionen aufbauten. Dann lief ich stets vom Sadelhof bis zum Marktplatz auf und ab, um den Arbeitern an den Fahrgeschäften und Verkaufsständen meine Hilfe anzubieten. Nun gut, in diesem Alter konnte man körperlich vermutlich noch nicht viel helfen. Gelegentlich, wenn es heiß war und die Sonne schien, erhielt man den Auftrag, den Schaustellern an der nächsten Bude Wasser oder Cola zu besorgen. Mit etwas Glück blieben dann ein oder zwei Groschen als kleines Taschengeld übrig.
 
