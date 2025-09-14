@@ -8,7 +8,7 @@ sources:
     - Ruhr-Nachrichten 10.11.1979 Nr. 262 DO2
 ---
 
-Dass Dortmund einen Blumengroßmarkt besitzt, der seinerzeit aus dem Zusammenschluss von 90 Produktionsbetrieben und Baumschulen bestand, wissen die meisten Erwachsenen bis heute wahrscheinlich nicht. Für uns Kinder war jedoch die Bauzeit vor der Eröffnung des neuen Blumengroßmarkts viel spannender – denn spielerisch konnten wir auf der Baustelle die Seetüchtigkeit der Materialien selbst entdecken.
+Dass Dortmund einen Blumengroßmarkt besitzt, der seinerzeit aus dem Zusammenschluss von 90 Produktionsbetrieben und Baumschulen bestand, wissen die meisten Erwachsenen bis heute wahrscheinlich nicht. Für uns Kinder war jedoch die Bauzeit vor der Eröffnung des neuen Blumengroßmarkts viel spannender – denn spielerisch konnten wir auf der Baustelle die Seetüchtigkeit der Baumaterialien selbst entdecken.
 
 Das Gelände der ehemaligen Zeche Germania wurde als neues Gewerbegebiet ausgewiesen und für die Ansiedlung neuer Betriebe vorbereitet. Rückblickend erinnere ich mich an das Areal als eine Art Mondlandschaft: karg bewachsen, mit vereinzeltem Müll und Schrott, der keinesfalls in Kinderhände gehörte. Diese raue Umgebung lud geradezu zum Erkunden ein. Der vorhandene Schrott bot zudem eine gute Grundlage, um sich eine einfache Hütte zu bauen.
 

@@ -1,15 +1,5 @@
 @import url("/assets/css/default.css");
 
-@keyframes hide {
-    from {
-        background-color: wheat;
-        opacity: 0;
-    }
-    to {
-        background-color: black;
-        opacity: 1;
-    }
-}
 @layer theme {
 
     a.nav {

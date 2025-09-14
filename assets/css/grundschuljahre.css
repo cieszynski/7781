@@ -60,6 +60,10 @@
         }
     }
 
+    h2 {
+        font-family: dela;
+    }
+
     header {
         display: flex;
         background-color: #337760ff;
