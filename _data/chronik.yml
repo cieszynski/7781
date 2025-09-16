@@ -1,0 +1,46 @@
+- # 01. Jan.
+  - # 1977
+    - title: "2. Jan. 1977" 
+      text: "text1 bla blub pen Boing Zack. Weer dhjk Jih"
+      class: local
+    - title: "2. Jan. 1977" 
+      text: "text1"
+      class: locally
+    - title: "2. Jan. 1977" 
+      text: "text2"
+      class: global
+  - # 1978
+    - title: "2. Jan. 1978" 
+      text: "text"
+  - # 1979
+    - title: "2. Jan. 1979" 
+      text: "text"
+  - # 1980
+    - title: "2. Jan. 1980" 
+      text: "text"
+  - # 1981
+    - title: "2. Jan. 1981" 
+      text: "text"
+- # 02. Jan.
+  - # 1977
+    - title: "2. Jan. 1977" 
+      text: "text1"
+      class: local
+    - title: "2. Jan. 1977" 
+      text: "text1"
+      class: locally
+    - title: "2. Jan. 1977" 
+      text: "text2"
+      class: global
+  - # 1978
+    - title: "2. Jan. 1978" 
+      text: "text"
+  - # 1979
+    - title: "2. Jan. 1979" 
+      text: "text"
+  - # 1980
+    - title: "2. Jan. 1980" 
+      text: "text"
+  - # 1981
+    - title: "2. Jan. 1981" 
+      text: "text"

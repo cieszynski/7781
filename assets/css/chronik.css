@@ -1,5 +1,15 @@
 @import url("/assets/css/default.css");
 
+@keyframes identifier {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .3;
+    }
+}
+
 @layer theme {
 
     a.nav {
@@ -76,7 +86,6 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: 100px;
-        background-color: green;
         position: relative;
         padding: 48px;
         row-gap: 16px;
@@ -88,33 +97,64 @@
         display: flex;
         flex-flow: column;
         padding: 0;
+        gap: 0;
+        background-color: #646e81;
+        font-family: fjallaoneregular;
+        color: #f8f6f0ff;
+        -webkit-tap-highlight-color: transparent;
     }
 
     details {
+        cursor:pointer;
+        user-select: none;
+        border-radius: 16px;
         display: block;
-        border: 1px solid red;
+        padding: 16px;
         width: 100%;
+
+        &.local {
+            background-color: #f0eeedff;
+            color: #363c45ff;
+        }
+
+        &.locally {
+            background-color: #626f85ff;
+        }
+
+        &.global {
+            background-color: #efb476ff;
+            color: #363c45ff;
+        }
+    }
+
+    footer {
+        background-color: #363c45ff;
+        border-radius: 0;
     }
 
     h1 {
-        height: 0;
+        background-color: #363c45ff;
+        text-align: center;
         overflow: hidden;
     }
 
     h2 {
         display: inline-block;
+        font-size: 16px;
     }
 
     header {
         padding: 32px 32px 16px 32px;
+        background-color: #363c45ff;
     }
 
     html {
         height: 100%;
-        background: #666;
+        /* background: #666; */
     }
 
     main {
+        background-color: #363c45ff;
         display: grid;
         position: relative;
         grid-template-columns: repeat(5, 100%);
@@ -124,5 +164,13 @@
         scroll-behavior: smooth;
         overflow: auto;
         flex: 1;
+    }
+
+    summary {
+    }
+    p {
+        font-size: 16px;
+        margin-left: 16px;
+        padding: 0;
     }
 }

@@ -1,5 +1,5 @@
 ---
-title: "Chronik von '77 bis '81"
+title: "Chronik '77 bis '81"
 layout: default
 stylesheet: "chronik.css"
 date: "2025-09-11"
@@ -8,93 +8,47 @@ date: "2025-09-11"
     <a href="/">cieszynski.de</a>
     <a href="./" style="margin-left: auto;">zurück</a>
 </header>
+<h1>{{ page.title }}</h1>
 <main>
-    {% for item in (1..365) %}
-        <article id="a{{ item }}">
-            {% if item > 1 %}
-            <a href="#a{{ item | minus: 1}}" class="nav up">up</a>
-            {% endif %}
-            {% if item < 365 %}
-            <a href="#a{{ item | plus: 1}}" class="nav down">down</a>
-            {% endif %}
-            <a href="#b{{ item }}" class="nav right">right</a>
-            <details>
-                <summary>
-                    <h2>
-                        {{ "2023-002" | date: "%Y-%m-%d" }}
-                        {% include locale-date.html date=page.date %}
-                       <!--  {{ item }} 1977 -->
-                    </h2>
-                </summary>
-            </details>
-        </article>
-        <article id="b{{ item }}">
-            {% if item > 1 %}
-            <a href="#b{{ item | minus: 1}}" class="nav up">up</a>
-            {% endif %}
-            {% if item < 365 %}
-            <a href="#b{{ item | plus: 1}}" class="nav down">down</a>
-            {% endif %}
-            <a href="#a{{ item }}" class="nav left">left</a>
-            <a href="#c{{ item }}" class="nav right">right</a>
-            <details>
-                <summary>
-                    <h2>
-                        {{ item }} 1978
-                    </h2>
-                </summary>
-            </details>
-        </article>
-        <article id="c{{ item }}">
-            {% if item > 1 %}
-            <a href="#c{{ item | minus: 1}}" class="nav up">up</a>
-            {% endif %}
-            {% if item < 365 %}
-            <a href="#c{{ item | plus: 1}}" class="nav down">down</a>
-            {% endif %}
-            <a href="#b{{ item }}" class="nav left">left</a>
-            <a href="#d{{ item }}" class="nav right">right</a>
-            <details>
-                <summary>
-                    <h2>
-                        {{ item }} 1979
-                    </h2>
-                </summary>
-            </details>
-        </article>
-        <article id="d{{ item }}">
-            {% if item > 1 %}
-            <a href="#d{{ item | minus: 1}}" class="nav up">up</a>
-            {% endif %}
-            {% if item < 365 %}
-            <a href="#d{{ item | plus: 1}}" class="nav down">down</a>
-            {% endif %}
-            <a href="#c{{ item }}" class="nav left">left</a>
-            <a href="#e{{ item }}" class="nav right">right</a>
-            <details>
-                <summary>
-                    <h2>
-                        {{ item }} 1980
-                    </h2>
-                </summary>
-            </details>
-        </article>
-        <article id="e{{ item }}">
-            {% if item > 1 %}
-            <a href="#e{{ item | minus: 1}}" class="nav up">up</a>
-            {% endif %}
-            {% if item < 365 %}
-            <a href="#e{{ item | plus: 1}}" class="nav down">down</a>
-            {% endif %}
-            <a href="#d{{ item }}" class="nav left">left</a>
-            <details>
-                <summary>
-                    <h2>
-                        {{ item }} 1981
-                    </h2>
-                </summary>
-            </details>
-        </article>
+    {% for record in site.data.chronik %}
+
+    {% for entry in record %}
+    <article id="a{{ forloop.parentloop.index }}{{ forloop.index }}">
+        {% if forloop.parentloop.index > 1 %}
+        <a href="#a{{ forloop.parentloop.index | minus: 1}}{{ forloop.index }}" class="nav up">up</a>
+        {% endif %}
+
+        {% if forloop.parentloop.index != forloop.parentloop.length %}
+        <a href="#a{{ forloop.parentloop.index | plus: 1}}{{ forloop.index }}" class="nav down">down</a>
+        {% endif %}
+
+        {% if forloop.index !=1 %}
+        <a href="#a{{ forloop.parentloop.index }}{{ forloop.index | minus: 1 }}" class="nav left">left</a>
+        {% endif %}
+
+        {% if forloop.index !=5 %}
+        <a href="#a{{ forloop.parentloop.index }}{{ forloop.index | plus: 1 }}" class="nav right">right</a>
+        {% endif %}
+
+        {% assign years = "1977, 1978, 1979, 1980, 1981" | split: ", " %}
+        {% assign year = years[forloop.index0] %}
+        {% assign doy = forloop.parentloop.index | prepend: '000' | slice: -3, 3 %}
+        {% assign date = year | append: "-" | append: doy | date: "%Y-%m-%d" %}
+        <time datetime="{{ date | date_to_xmlschema }}">{% include locale-date.html date=date %}</time>
+
+        {% for item in entry %}
+        <details name="a{{ forloop.parentloop.parentloop.index }}{{ forloop.parentloop.index }}" {% if forloop.index==1
+            %}open{% endif %} class="{{ item.class | default: 'local' }}">
+            <summary>
+                <h2>{{ item.title }}</h2>
+            </summary>
+            <p>{{ item.text }}</p>
+        </details>
+        {% endfor %}
+
+    </article>
+    {% endfor %}
+
     {% endfor %}
 </main>
 
