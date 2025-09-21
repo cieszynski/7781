@@ -4,7 +4,7 @@
 <html lang="de">
 
 <head>
-    <title>Zeitmaschine - Ergebnisse #{{ paginator.page }}</title>
+    <title>Zeitmaschine - Geschichten und Meldungen #{{ paginator.page }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,7 +54,8 @@
                     justify-content: center;
                     width: 48px;
                     height: 48px;
-                    border-radius: 24px;
+                    border-radius: 24px; 
+                    border: 2px solid #fff;
                     color: #ffffff;
                     background-color: #000000;
                     position: relative;
@@ -91,7 +92,7 @@
         <img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="Zeitmaschine">
     </h1>
     <main>
-        <h2>Ergebnisse #{{ paginator.page }}</h2>
+        <h2>Geschichten und Meldungen #{{ paginator.page }}</h2>
         {% for post in paginator.posts %}
         <section>
             <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>

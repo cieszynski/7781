@@ -20,6 +20,21 @@
                 padding: 16px;
             }
 
+            aside {
+                width: 100%;
+                display: block;
+                text-align: center;
+                color: #fff;
+                background-color: #1E6AE1;
+                border: 5px solid #fff;
+                border-radius: 16px;
+                padding: 16px;
+
+                &>a {
+                    text-decoration: underline;
+                }
+            }
+
             body {
                 &>img {
                     border-radius: 32px 32px 0 0;
@@ -40,6 +55,10 @@
 
             html {
                 background-color: #363c45;
+            }
+
+            h1 {
+                text-align: center;
             }
 
             h2 {
@@ -95,7 +114,7 @@
                 &>a {
                     display: flex;
                     align-items: center;
-                    font-size: 12px;
+                    font-size: 16px;
                     border-radius: 16px;
                     color: #eee;
                     background-color: #111;
@@ -174,6 +193,12 @@
             <cite>{{ source }}</cite>
             {% endfor %}
         </article>
+        <aside>
+            Weißt du es besser? War es anders? Dann schreibe mir unter
+            <a href="mailto:ich-weiss-was@cieszynski.de" class="nobr">
+                ich-weiss-was@cieszynski.de
+            </a>
+        </aside>
         <nav>
             {% if page.next.url %}
             <a href="{{page.next.url | relative_url }}" class="next">

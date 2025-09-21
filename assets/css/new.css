@@ -26,6 +26,10 @@
         margin: 0;
         box-sizing: border-box;
     }
+    
+    .nobr {
+        white-space: nowrap;
+    }
 
     a {
         color: inherit;
