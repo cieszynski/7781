@@ -260,7 +260,7 @@
      id="layer20"
      style="display:inline"
      transform="translate(0,-1.8908705)"><rect
-       style="display:inline;fill:#337760;fill-opacity:1;stroke-width:16;stroke-linecap:round;stroke-linejoin:round"
+       style="display:none;fill:#337760;fill-opacity:1;stroke-width:16;stroke-linecap:round;stroke-linejoin:round"
        id="rect1"
        width="1920"
        height="1080"

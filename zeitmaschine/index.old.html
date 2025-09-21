@@ -1,0 +1,57 @@
+---
+layout: default
+stylesheet: zeitmaschine.css
+title: Zeitmaschine
+---
+<header>
+    <a href="/">cieszynski.de</a>
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">zurück</a>
+    {% else %}
+    <a href="../">zurück</a>
+    {% endif %}
+</header>
+<img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="">
+<main>
+    <h1>Zeit(ungs)<wbr>maschine #{{ paginator.page }}</h1>
+    <p>
+        Mach dich bereit für eine Zeitreise zurück in die Jahre 1977 bis 1981 – mit Anekdoten und den Meldungen aus dieser Zeit.
+    </p>
+
+    {% for post in paginator.posts %}
+    <section>
+        <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>
+        <h2>{{ post.title }}</h2>
+        {{ post.excerpt }}
+        <a href="{{ post.url | relative_url }}">Zum vollständigen Text</a>
+    </section>
+    {% endfor %}
+
+</main>
+<nav class="pagination">
+    {% comment %}
+    {% if paginator.previous_page %}
+    <a class="prev" href="{{ paginator.previous_page_path | relative_url }}" title="vorherige Seite">&#x27F5;</a>
+    {% endif %}
+    {% endcomment %}
+
+    {% for num in (1..paginator.total_pages) %}
+    {% if num == paginator.page %}
+    <a class="current">{{ num }}</a>
+    {% elsif num == 1 %}
+    <a href="{{ site.paginate_path | relative_url | replace: 'seite:num/', '' }}">{{ num }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | relative_url | replace: ':num', num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% comment %}
+    {% if paginator.next_page %}
+    <a class="next" href="{{ paginator.next_page_path | relative_url }}" title="nächste Seite">&#x27F6;</a>
+    {% endif %}
+    {% endcomment %}
+</nav>
+<footer>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+    <a href="/rechtliches.html">Impressum | Datenschutz</a>
+</footer>

@@ -1,57 +1,121 @@
 ---
-layout: default
-stylesheet: zeitmaschine.css
-title: Zeitmaschine
 ---
-<header>
-    <a href="/">cieszynski.de</a>
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">zurück</a>
-    {% else %}
-    <a href="../">zurück</a>
-    {% endif %}
-</header>
-<img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="">
-<main>
-    <h1>Zeit(ungs)<wbr>maschine #{{ paginator.page }}</h1>
-    <p>
-        Mach dich bereit für eine Zeitreise zurück in die Jahre 1977 bis 1981 – mit Anekdoten und den Meldungen aus dieser Zeit.
-    </p>
+<!DOCTYPE html>
+<html lang="de">
 
-    {% for post in paginator.posts %}
-    <section>
-        <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>
-        <h2>{{ post.title }}</h2>
-        {{ post.excerpt }}
-        <a href="{{ post.url | relative_url }}">Zum vollständigen Text</a>
-    </section>
-    {% endfor %}
+<head>
+    <title>Zeitmaschine - Ergebnisse #{{ paginator.page }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</main>
-<nav class="pagination">
-    {% comment %}
-    {% if paginator.previous_page %}
-    <a class="prev" href="{{ paginator.previous_page_path | relative_url }}" title="vorherige Seite">&#x27F5;</a>
-    {% endif %}
-    {% endcomment %}
+    <style>
+        @import url("/7781/assets/css/new.css") layer(default);
 
-    {% for num in (1..paginator.total_pages) %}
-    {% if num == paginator.page %}
-    <a class="current">{{ num }}</a>
-    {% elsif num == 1 %}
-    <a href="{{ site.paginate_path | relative_url | replace: 'seite:num/', '' }}">{{ num }}</a>
-    {% else %}
-    <a href="{{ site.paginate_path | relative_url | replace: ':num', num }}">{{ num }}</a>
-    {% endif %}
-    {% endfor %}
+        @layer theme {
 
-    {% comment %}
-    {% if paginator.next_page %}
-    <a class="next" href="{{ paginator.next_page_path | relative_url }}" title="nächste Seite">&#x27F6;</a>
-    {% endif %}
-    {% endcomment %}
-</nav>
-<footer>
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
-    <a href="/rechtliches.html">Impressum | Datenschutz</a>
-</footer>
+            footer {
+                color: #fff;
+                font-family: fjallaoneregular;
+            }
+
+            h1 {
+                border-radius: 32px 32px 0 0;
+                background-color: #E89A4A;
+            }
+
+            header {
+                color: #fff;
+                background-color: #363c45;
+                font-family: fjallaoneregular;
+            }
+
+            html {
+                background-color: #363c45;
+            }
+
+            main {
+
+                background-color: #E89A4A;
+            }
+
+            nav {
+                gap: 16px;
+                display: flex;
+                flex-flow: wrap;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+                font-size: 22px;
+                width: 100%;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 24px;
+                    color: #ffffff;
+                    background-color: #000000;
+                    position: relative;
+
+                    &.current {
+                        color: #000000;
+                        background-color: #ffffff;
+                    }
+
+                    &.next::after {
+                        position: absolute;
+                        inset: 0;
+                        content: "X";
+                        background-color: #ffffff;
+                        clip-path: polygon(5% 5%, 95% 95%, 5% 95%, 5% 5%);
+                    }
+                }
+            }
+
+            section {
+                color: #363c45;
+                background-color: #eeb;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/">cieszynski.de</a>
+        <a href="../">zurück</a>
+    </header>
+    <h1>
+        <img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="Zeitmaschine">
+    </h1>
+    <main>
+        <h2>Ergebnisse #{{ paginator.page }}</h2>
+        {% for post in paginator.posts %}
+        <section>
+            <time datetime="{{ post.date | date_to_xmlschema  }}">{% include locale-date.html date=post.date%}</time>
+            <h3>{{ post.title }}</h3>
+            {{ post.excerpt }}
+            <a href="{{ post.url | relative_url }}">Zum vollständigen Text</a>
+        </section>
+        {% endfor %}
+    </main>
+    <nav>
+        {% for num in (1..paginator.total_pages) %}
+        {% if num == paginator.page %}
+        <a class="current">{{ num }}</a>
+        {% elsif num == 1 %}
+        <a href="{{ site.paginate_path | relative_url | replace: 'seite:num/', '' }}">{{ num }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', num }}">{{ num }}</a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+    <footer>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+        <a href="/rechtliches.html">Impressum | Datenschutz</a>
+    </footer>
+</body>
+
+</html>

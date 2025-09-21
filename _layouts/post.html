@@ -10,10 +10,144 @@
     <meta name="description" content="{{ page.desc }}">
     <meta name="author" content="Stephan Cieszynski">
 
-    <link rel="preload" href="{{ page.stylesheet | prepend: 'assets/css/' | relative_url  }}" as="style">
-    <link rel="preload" href="/assets/fonts/fjallaone-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="/assets/fonts/literal.bold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="{{ page.stylesheet | prepend: 'assets/css/' | relative_url  }}">
+    <style>
+        @import url("/7781/assets/css/new.css") layer(default);
+
+        @layer theme {
+            article {
+                background-color: #eeb;
+                border-radius: 8px;
+                padding: 16px;
+            }
+
+            body {
+                &>img {
+                    border-radius: 32px 32px 0 0;
+                    background-color: #E89A4A;
+                }
+            }
+
+            footer {
+                color: #fff;
+                font-family: fjallaoneregular;
+            }
+
+            header {
+                color: #fff;
+                background-color: #363c45;
+                font-family: fjallaoneregular;
+            }
+
+            html {
+                background-color: #363c45;
+            }
+
+            h2 {
+                font-weight: normal;
+                border-bottom: 2px solid black;
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            main {
+                background-color: #E89A4A;
+                padding: 16px;
+                gap: 16px;
+                flex: 1;
+            }
+
+            cite {
+                display: block;
+            }
+
+            figure {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                & figcaption {
+                    padding: 8px;
+                    font-size: small;
+                    font-style: italic;
+                    color: #555;
+                }
+
+                & img {
+                    display: block;
+                    width: min(350px, 100%);
+                }
+            }
+
+            p {
+                color: #363c45;
+                padding: 8px 0;
+                text-align: start;
+            }
+
+            nav {
+                width: 100%;
+                display: flex;
+
+                &>a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    border-radius: 16px;
+                    color: #eee;
+                    background-color: #111;
+                    height: 32px;
+
+                    &.next {
+                        position: relative;
+                        padding: 8px 16px 8px 28px;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            inset: 10px auto 10px 10px;
+                            transform: rotate(135deg);
+                            width: 12px;
+                            height: 12px;
+                            border: solid #eee;
+                            border-width: 0 3px 3px 0;
+                            padding: 3px;
+                        }
+                    }
+
+                    &.prev {
+                        position: relative;
+                        margin-left: auto;
+                        padding: 8px 28px 8px 16px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            inset: 10px 10px 10px auto;
+                            transform: rotate(-45deg);
+                            width: 12px;
+                            height: 12px;
+                            border: solid #eee;
+                            border-width: 0 3px 3px 0;
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+
+            cite,
+            time {
+                font-size: small;
+                font-style: italic;
+                color: #555;
+            }
+        }
+    </style>
 </head>
 
 <body>

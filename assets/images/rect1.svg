@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1896"
-   height="1056"
-   viewBox="0 0 1896 1056"
+   width="1903"
+   height="1063"
+   viewBox="0 0 1903 1063"
    version="1.1"
    id="svg1"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,16 +35,16 @@
        gradientUnits="userSpaceOnUse" />
   </defs>
   <rect
-     style="fill:#eeb377;stroke:none;stroke-width:7;stroke-linejoin:round"
+     style="fill:#eeb377;stroke:#000000;stroke-width:7;stroke-linejoin:round"
      id="rect1"
      width="1896"
      height="1056"
-     x="0"
-     y="0" />
+     x="3.5"
+     y="3.5" />
   <g
      id="layer2"
      style="display:inline"
-     transform="translate(-8,-8)">
+     transform="translate(-4.5,-4.5)">
     <path
        style="fill:#ffaa00;fill-opacity:1;stroke:#bbbbbb;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        d="M 959.8651,540.16917 1919.2243,439.16838 1920,639.65593 Z"
@@ -129,7 +129,7 @@
   <g
      id="layer3"
      style="display:inline"
-     transform="translate(-8,-8)">
+     transform="translate(-4.5,-4.5)">
     <ellipse
        style="fill:url(#radialGradient438);fill-opacity:0.666667;fill-rule:nonzero;stroke:none;stroke-width:22.1674;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="path437"
@@ -140,7 +140,7 @@
   </g>
   <g
      id="layer4"
-     transform="translate(-8,-8)"
+     transform="translate(-4.5,-4.5)"
      style="display:inline">
     <path
        style="font-size:500px;font-family:'HEY LOUIE';-inkscape-font-specification:'HEY LOUIE';stroke:#ffffff;stroke-width:24;stroke-linecap:round;stroke-linejoin:round"

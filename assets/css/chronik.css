@@ -165,9 +165,6 @@
         overflow: auto;
         flex: 1;
     }
-
-    summary {
-    }
     p {
         font-size: 16px;
         margin-left: 16px;

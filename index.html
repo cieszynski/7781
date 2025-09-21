@@ -1,48 +1,134 @@
 ---
-title: "'77 bis '81"
-layout: default
-stylesheet: "7781.css"
 ---
-<header>
-    <a href="/">cieszynski.de</a>
-    <a href="/" style="margin-left: auto;">zurück</a>
-</header>
-<h1>
-    <img style="width: 100%" src="{{ 'assets/images//7781-strahlen-plain.svg' | relative_url }}" alt="Die Jahre 1977 bis 1981">
-</h1>
-<p>Die Jahre 1977 bis 1981 – im Rückblick für viele hoffentlich eine wunderbare Zeit, in der wir die <span class="nobr">Steinhammer Grundschule</span> in <span class="nobr">Dortmund Marten</span> besuchten.</p>
-<p>Es sind viele Erinnerungen an aufregende Abenteuer, erste Freundschaften und an die Welt, wie sie damals war.</p>
-<p>Im August 2027 ist es fünfzig Jahre her, dass wir eingeschult wurden.</p>
-<p>Hier möchte ich in diese Zeit zurückreisen und meine Erinnerungen und Fundstücke mit euch teilen.</p>
-<p>Es würde mich freuen, wenn auch du Erinnerungen und Erlebnisse aus dieser Zeit mit mir teilen könntest. Gemeinsam können
-    wir bestimmt noch viel mehr Interessantes über diese längst vergangenen Jahre herausfinden.</p>
-<main>
-    <section>
-        <img src="{{ 'assets/images/7781-steinhammer-schule-colored-3d-plain.svg' | relative_url }}" alt="">
-        <hgroup>
-            <h2 style="font-family: dela;">Grundschuljahre</h2>
-            <p>Diese Zeit hat unsere Kindheit geprägt und ist voller Erinnerungen</p>
-        </hgroup>
-        <a href="{{ 'grundschuljahre/index.html' | relative_url }}">Weiter zur Grundschulzeit</a>
-    </section>
-    <section>
-        <img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url }}" alt="">
-        <hgroup>
-            <h2>Zeit(ungs)<wbr>maschine</h2>
-            <p>Mach dich bereit für eine Zeitreise zurück in die Jahre 1977 bis 1981 – mit Anekdoten und den Meldungen aus dieser Zeit</p>
-        </hgroup>
-        <a href="{{ 'zeitmaschine/index.html' | relative_url }}">Weiter zur Zeitmaschine</a>
-    </section>
-    <section>
-        <img src="{{ 'assets/images/chronik-plain.svg' | relative_url }}" alt="">
-        <hgroup>
-            <h2>Chronik</h2>
-            <p>Da steht noch nichts...</p>
-        </hgroup>
-        <a href="{{ 'chronik.html' | relative_url }}">Weiter zur Chronik</a>
-    </section>
-</main>
-<footer>
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
-    <a href="/rechtliches.html">Impressum | Datenschutz</a>
-</footer>
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>1977 bis 1981</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @import url("/7781/assets/css/new.css") layer(default);
+
+        @layer theme {
+            dd {
+                color: #363c45;
+
+                &:not(:last-child) {
+                    padding-bottom: 16px;
+                }
+            }
+
+            footer {
+                color: #fff;
+                font-family: fjallaoneregular;
+            }
+
+            header {
+                color: #fff;
+                background-color: #363c45;
+                font-family: fjallaoneregular;
+            }
+
+            html {
+                background-color: #363c45;
+            }
+
+            h1 {
+                background-color: #eeb377;
+                border-radius: 32px 32px 0 0;
+            }
+
+            h2 {
+                font-weight: normal;
+                border-bottom: 2px solid #363c45;
+                color: #363c45;
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            main {
+                background-color: #eeb377;
+            }
+
+            p {
+                color: #363c45;
+            }
+
+            section {
+                color: #363c45;
+                background-color: #E89A4A;
+            }
+
+            time {
+                font-size: x-small;
+                font-style: italic;
+                color: #333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/">cieszynski.de</a>
+        <a href="../">zurück</a>
+    </header>
+    <h1>
+        <img src="{{ 'assets/images/7781-strahlen-plain.svg' | relative_url}}" alt="1977 bis 1981">
+    </h1>
+    <main>
+        <h2>News</h2>
+        <dl>
+            {% for record in site.data.news %}
+            <dt>
+                <time datetime="{{ record.date | date_to_xmlschema }}">{% include locale-date.html date=record.date
+                    %}</time>
+            </dt>
+            <dd>{{record.text}}</dd>
+            {% endfor %}
+        </dl>
+        <h2>Navigation</h2>
+        <section>
+            <img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url}}" alt="">
+            <hgroup>
+                <h3>Zeit(ungs)<wbr>maschine</h3>
+                <p>Mach dich bereit für eine Zeitreise zurück in die Jahre 1977 bis 1981 – mit Geschichtchen und
+                    Meldungen aus dieser Zeit</p>
+            </hgroup>
+            <a href="{{ 'zeitmaschine/index.html' | relative_url }}">Weiter zur Zeitmaschine</a>
+        </section>
+        <!--         <section>
+            <img src="{{ 'assets/images/zeitmaschine-colored-plain.svg' | relative_url}}" alt="">
+            <hgroup>
+                <h3>Zeit(ungs)<wbr>maschine</h3>
+                <p>Mach dich bereit für eine Zeitreise zurück in die Jahre 1977 bis 1981 – mit Geschichtchen und
+                    Meldungen aus dieser Zeit</p>
+            </hgroup>
+            <a href="{{ 'zeitmaschine/index.html' | relative_url }}">Weiter zur Zeitmaschine</a>
+        </section> -->
+        <p>Die Jahre 1977 bis 1981 – im Rückblick für viele hoffentlich eine wunderbare Zeit, in der wir die <span
+                class="nobr">Steinhammer Grundschule</span> in <span class="nobr">Dortmund Marten</span> besuchten.</p>
+        <p>Es sind viele Erinnerungen an aufregende Abenteuer, erste Freundschaften und an die Welt, wie sie damals war.
+        </p>
+        <p>Im August 2027 ist es fünfzig Jahre her, dass wir eingeschult wurden.</p>
+        <p>Hier möchte ich in diese Zeit zurückreisen und meine Erinnerungen und Fundstücke mit euch teilen.</p>
+        <!--         <p>Es würde mich freuen, wenn auch du Erinnerungen und Erlebnisse aus dieser Zeit mit mir teilen könntest.
+            Gemeinsam können
+            wir bestimmt noch viel mehr Interessantes über diese längst vergangenen Jahre herausfinden.</p> -->
+    </main>
+    <footer>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 license</a>
+        <a href="/rechtliches.html">Impressum | Datenschutz</a>
+    </footer>
+    <!--     <nav>
+        <a href="{{ '/' | relative_url}}">Home</a>
+        <a href="{{ '/' | relative_url}}">Home</a>
+    </nav> -->
+</body>
+
+</html>
