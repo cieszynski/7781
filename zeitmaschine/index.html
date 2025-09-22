@@ -7,9 +7,12 @@
     <title>Zeitmaschine - Geschichten und Meldungen #{{ paginator.page }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#363c45">
+    <meta name="description" content="Zeitreise mit Zeitungsartikeln: Geschichten und Meldungen #{{ paginator.page }}">
+    <meta name="author" content="Stephan Cieszynski">
 
     <style>
-        @import url("/7781/assets/css/new.css") layer(default);
+        @import url("/assets/css/global.css");
 
         @layer theme {
 
@@ -38,7 +41,7 @@
                 background-color: #E89A4A;
             }
 
-            nav {
+            body>nav {
                 gap: 16px;
                 display: flex;
                 flex-flow: wrap;
@@ -54,7 +57,7 @@
                     justify-content: center;
                     width: 48px;
                     height: 48px;
-                    border-radius: 24px; 
+                    border-radius: 24px;
                     border: 2px solid #fff;
                     color: #ffffff;
                     background-color: #000000;
@@ -75,9 +78,14 @@
                 }
             }
 
+            p {
+                text-align: center;
+            }
+
             section {
                 color: #363c45;
                 background-color: #eeb;
+                align-items: center;
             }
         }
     </style>

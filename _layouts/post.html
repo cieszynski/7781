@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'de' }}">
+<html lang="de">
 
 <head>
     <title>{{ page.title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="{{ page.robots | default: 'follow, index' }}">
-    <meta name="theme-color" content="{{ page.themeColor | default: '#666' }}">
-    <meta name="description" content="{{ page.desc }}">
+    <meta name="theme-color" content="#363c45">
+    <meta name="description" content="{{ page.excerpt | strip_html  }}">
     <meta name="author" content="Stephan Cieszynski">
 
     <style>
-        @import url("/7781/assets/css/new.css") layer(default);
+        @import url("/assets/css/global.css");
 
         @layer theme {
             article {
@@ -80,6 +79,7 @@
 
             cite {
                 display: block;
+                text-align: end;
             }
 
             figure {
@@ -107,7 +107,7 @@
                 text-align: start;
             }
 
-            nav {
+            main>nav {
                 width: 100%;
                 display: flex;
 
@@ -162,7 +162,7 @@
             cite,
             time {
                 font-size: small;
-                font-style: italic;
+                font-style: normal;
                 color: #555;
             }
         }
