@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#363c45">
+    <meta name="description" content="{{ page.excerpt | strip_html  }}">
+    <meta name="author" content="Stephan Cieszynski">
+
+    <style>
+        @import url("/assets/css/global.css");
+
+        @layer theme {
+
+            article {
+                flex: 1;
+                padding: 16px;
+                border-radius: 16px;
+                background-color: #FAFAEC;
+            }
+
+            aside {
+                width: 100%;
+                display: block;
+                text-align: center;
+                color: #fff;
+                background-color: #1E6AE1;
+                border: 5px solid #fff;
+                border-radius: 16px;
+                padding: 16px;
+
+                &>a {
+                    text-decoration: underline;
+                }
+            }
+
+            h1 {
+                background-color: #eeb377;
+                    background-color: #E89A4A;
+                border-radius: 32px 32px 0 0;
+            }
+
+            h2 {
+                border-bottom: 2px solid currentColor;
+            }
+
+            footer {
+                color: #fff;
+                font-family: fjallaoneregular;
+                background-color: #363c45;
+            }
+
+            header {
+                color: #fff;
+                background-color: #363c45;
+                font-family: fjallaoneregular;
+            }
+
+            html {
+                background-color: #363c45;
+            }
+
+            main {
+                flex-flow: column;
+                background-color: #eeb377;
+                    background-color: #E89A4A;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/">cieszynski.de</a>
+        <a href="../">zurück</a>
+    </header>
+    <h1>
+        <img src="{{ 'assets/images/7781-steinhammer-schule-solo-3d-plain.svg' | relative_url}}" alt="{{ page.title }}">
+    </h1>
+    <main>
+        <article>
+            {{ content }}
+        </article>
+        <nav>
+            <h2>Weiterlesen</h2>
+            {% for entry in site.schulzeit %}
+            {% if page.title==entry.title %}
+            {{ entry.title }}
+            {% else %}
+            <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+        <aside>
+            Weißt du es besser? War es anders? Dann schreibe mir unter
+            <a href="mailto:ich-weiss-was@cieszynski.de" class="nobr">
+                ich-weiss-was@cieszynski.de
+            </a>
+        </aside>
+    </main>
+    {% include global-footer.html %}
+</body>
