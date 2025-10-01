@@ -19,14 +19,6 @@
 
         @layer theme {
 
-
-
-            h1 {
-                color: #006699;
-                text-align: center;
-                font-family: "dela";
-            }
-
             main {
                 flex-flow: column;
             }
@@ -39,17 +31,17 @@
         <a href="/">cieszynski.de</a>
         <a href="../">zurück</a>
     </header>
-    <img src="{{ 'assets/images/7781-steinhammer-schule-solo-3d-plain.svg' | relative_url }}" alt="">
+    <img src="{{ 'assets/images/7781-vorm-fernseher-plain.svg' | relative_url }}" alt="">
     <main>
         <article>
             <h1>
-                {{ page.title }}
+                Fernsehen: {{ page.title }}
             </h1>
             {{ content }}
         </article>
         <nav class="more">
-            <h2>Weiterlesen</h2>
-            {% for entry in site.schulzeit %}
+            <h2>Zum Weiterlesen:</h2>
+            {% for entry in site.fernsehen %}
             {% if page.title!=entry.title %}
             <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
             {% endif %}

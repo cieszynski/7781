@@ -11,4 +11,9 @@ collections:
     order:
     - unsere-schule.md
     - rechnen-schreiben-lesen.md
+  fernsehen:
+    output: true
+    order:
+    - das-fernsehprogramm.md
+    - neuheiten.md
 taglist: 5
