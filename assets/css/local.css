@@ -14,6 +14,14 @@
     src: url("/7781/assets/fonts/familyguy.woff2") format("woff2");
 }
 
+@font-face {
+    font-family: "droidserif";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/fonts/droidserif-regular-webfont.woff") format("woff");
+}
+
 @layer theme {
 
     article {
@@ -63,7 +71,6 @@
         text-align: center;
     }
 
-    h1,
     h2,
     h3 {
         margin-bottom: 16px;

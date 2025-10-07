@@ -20,11 +20,25 @@
         @layer theme {
 
 
+            cite {
+                display: block;
+                text-align: end;
+                font-size: small;
+                font-style: normal;
+                color: #555;
+            }
 
             h1 {
                 color: #006699;
-                text-align: center;
                 font-family: "dela";
+            }
+
+            h2 {
+                margin: 16px 0;
+            }
+
+            p {
+                font-family: "droidserif";
             }
 
             main {
@@ -46,15 +60,20 @@
                 {{ page.title }}
             </h1>
             {{ content }}
+            {% for source in page.sources %}
+            <cite>{{ source }}</cite>
+            {% endfor %}
         </article>
+        {% comment %}
         <nav class="more">
-            <h2>Weiterlesen</h2>
+            <h2>Auch das noch:</h2>
             {% for entry in site.schulzeit %}
             {% if page.title!=entry.title %}
             <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
             {% endif %}
             {% endfor %}
         </nav>
+        {% endcomment %}
         <aside>
             Weißt du es besser? War es anders? Dann schreibe mir unter
             <a href="mailto:ich-weiss-was@cieszynski.de" class="nobr">
