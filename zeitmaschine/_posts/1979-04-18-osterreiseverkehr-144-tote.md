@@ -7,7 +7,10 @@ sources:
     - Ruhr-Nachrichten 18.04.1979 Nr. 90
 ---
 
+Heutzutage eine unvorstellbare Zahl an Verkehrstoten. 
+
 {% comment %}
+1979 erstmals wieder weniger als 13000 Verkehrtote 19800130x-rn
 69 Verkehrstote zum neuen Jahr 19770104x-rn
 39 Verkehrstote über Weihnachten 198112_0152
 Immer weniger fahren mit Gurt - 94% der Autos haben einen Gurt, 49% der Fahrer nutzen ihn 19770219a-rn
