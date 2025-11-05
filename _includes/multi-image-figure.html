@@ -1,0 +1,16 @@
+<figure>
+    <picture>
+        {% assign sources=include.sources | split:"," %}
+        {% for source in sources %}
+        <source srcset="{{ include.src | absolute_path | replace: 'jpg', source }}" type="image/{{ source }}">
+        {% endfor %}
+        <img src="{{ include.src | absolute_path }}" alt="{{ include.alt }}">
+    </picture>
+    <figcaption>
+        {{ include.caption }}
+    </figcaption>
+</figure>
+{% comment %}
+magick mogrify -format webp -quality 75 -define webp:method=6 *.jpg
+magick mogrify -format avif -depth 14 -define heic:speed=8 *.jpg
+{% endcomment %}
