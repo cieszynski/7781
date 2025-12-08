@@ -9,9 +9,13 @@ sources:
     - Ruhr-Nachrichten 07.05.1979 Nr. 105 M1
 ---
 
-Ein bisschen Geduld!
+Als Wischlinge bezeichneten sich damals die Mitglieder von Wischlingen e.V. und der Jugendklub zur Pflege der Volksmusik e.V. 
+
+
 
 <% comment %>
+Wischlingen: Fotodokumentation, Pit Budde
+
 Vereine Wischlingen e.V. und Jugendklub zur Pflege der Volksmusik e.V.
 Haus Wischlingen war ein Komplex von drei Gebäuden und einer Kapelle.
 
