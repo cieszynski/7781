@@ -175,6 +175,20 @@
                 color: #555;
             }
         }
+
+        aside {
+            span {
+                text-decoration: underline;
+            }
+
+            span::before {
+                content: attr(data-before);
+            }
+
+            span::after {
+                content: attr(data-after);
+            }
+        }
     </style>
 </head>
 
@@ -204,8 +218,8 @@
         </article>
         <aside>
             Weißt du es besser? War es anders? Dann schreibe mir unter
-            <a href="mailto:ich-weiss-was@cieszynski.de" class="nobr">
-                ich-weiss-was@cieszynski.de
+            <span data-before="ich" data-after="weiss-es (be">-</span><!-- 
+             --><span data-before="i) cieszynski" data-after="de">.</span>
             </a>
         </aside>
         <nav>

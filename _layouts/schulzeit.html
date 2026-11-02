@@ -44,6 +44,17 @@
             main {
                 flex-flow: column;
             }
+            aside {
+                span {
+                    text-decoration: underline;
+                }
+                span::before {
+                    content: attr(data-before);
+                }
+                span::after {
+                    content: attr(data-after);
+                }
+            }
         }
     </style>
 </head>
@@ -76,9 +87,8 @@
         {% endcomment %}
         <aside>
             Weißt du es besser? War es anders? Dann schreibe mir unter
-            <a href="mailto:ich-weiss-was@cieszynski.de" class="nobr">
-                ich-weiss-was@cieszynski.de
-            </a>
+            <span data-before="ich" data-after="weiss-es (b">-</span><!-- 
+             --><span data-before="ei) cieszynski" data-after="de">.</span>
         </aside>
     </main>
     {% include global-footer.html %}
